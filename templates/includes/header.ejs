@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="<%= themeConfig.domain %>">
+                <img class="avatar" src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    <%= themeConfig.siteName %>
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                <% menus.forEach(function(menu) { %>
+                    <% if (menu.openType === 'External') { %>
+                        <li>
+                            <a href="<%= menu.link %>" class="menu" target="_blank">
+                                <%= menu.name %>
+                            </a>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="<%= menu.link %>" class="menu">
+                                    <%= menu.name %>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>

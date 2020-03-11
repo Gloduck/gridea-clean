@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+    <div class="main">
+        <%- include('./includes/header') %>
+
+            <div class="tags-container main-container">
+                <div class="tags-group">
+                    <% tags.forEach((tag) => { %>
+                        <a class="tags-tag i-tag
+                            i-tag-<%= ['', 'primary', 'success', 'warning', 'info','error','banana','other_1','other_2','other_3','other_4',][Math.floor(Math.random()*11)] %>" href="<%= tag.link %>">
+                            <%= tag.name %>
+                        </a>
+                        <% }); %>
+                </div>
+            </div>
+
+            <%- include('./includes/footer') %>
+    </div>
+</body>
+
+</html>
