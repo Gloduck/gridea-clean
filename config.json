@@ -1,0 +1,129 @@
+{
+    "name": "Golduck",
+    "version": "1.0.0",
+    "author": "萌新",
+    "repository": "https://github.com/1035311527/gridea-Golduck",
+    "customConfig": [
+        {
+            "name": "github",
+            "label": "Github",
+            "group": "社交",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "twitter",
+            "label": "Twitter",
+            "group": "社交",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "weibo",
+            "label": "微博",
+            "group": "社交",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "facebook",
+            "label": "Facebook",
+            "group": "社交",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "ga",
+            "label": "跟踪 ID",
+            "group": "谷歌统计",
+            "value": "",
+            "type": "input",
+            "note": "UA-xxxxxxxxx-x"
+        },
+        {
+            "name": "notice",
+            "label": "公告栏",
+            "group": "侧边栏",
+            "value": "",
+            "type": "textarea",
+            "note": "不填写则不显示"
+        },
+        {
+            "name": "valineID",
+            "label": "appId",
+            "group": "Valine 评论配置",
+            "value": "",
+            "type": "input",
+            "note": "请输入appId"
+        },
+        {
+            "name": "valineKey",
+            "label": "appKey",
+            "group": "Valine 评论配置",
+            "value": "",
+            "type": "input",
+            "note": "请输入appKey"
+        },
+        {
+            "name": "highlightjs",
+            "label": "代码高亮css文件",
+            "group": "代码高亮",
+            "value": "",
+            "type": "input",
+            "note": "请输入highlightjs的css链接地址"
+        },
+        {
+            "name": "autofeature",
+            "label": "默认封面图片",
+            "group": "封面图片",
+            "value": "",
+            "type": "input",
+            "note": "请输入默认封面图片的链接"
+        },
+        {
+            "name": "friends",
+            "label": "友链",
+            "group": "友链",
+            "type": "array",
+            "value": [],
+            "arrayItems": [
+                {
+                    "label": "名称",
+                    "name": "siteName",
+                    "type": "input",
+                    "value": ""
+                },
+                {
+                    "label": "链接",
+                    "name": "siteLink",
+                    "type": "input",
+                    "value": ""
+                },
+                {
+                    "label": "Logo",
+                    "name": "siteLogo",
+                    "type": "input",
+                    "value": ""
+                },
+                {
+                    "label": "描述",
+                    "name": "description",
+                    "type": "textarea",
+                    "value": ""
+                }
+            ],
+            "note": "添加友链页面为当前域名+/friends"
+        },{
+            "name": "friendslogo",
+            "label": "默认友链logo图片",
+            "group": "友链",
+            "value": "//tva1.sinaimg.cn/large/006ZFECEgy1gcpytywd82j30j60j6aar.jpg",
+            "type": "input",
+            "note": "请输入默认友链图片的链接"
+        }
+    ]
+}
