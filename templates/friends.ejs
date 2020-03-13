@@ -3,6 +3,7 @@
 <head>
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
     <%- include('./includes/cache') %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 
 <body>
@@ -12,21 +13,27 @@
         <div id="main-content" class="post-container main-container">
             <div id="content" class="main-container-left">
                 <% if (site.customConfig.friends) { %>
-                    <% site.customConfig.friends.forEach(function(friend) { %>
-                      <div class="friends_card">
-                            <% if (friend.siteLogo) { %>
-                                <a href="<%= friend.siteLink %>" target="_blank"><img class="friends_card-avatar" src="<%= friend.siteLogo %>"></a>
-                            <% } else { %>
-                                <a href="<%= friend.siteLink %>" target="_blank"><img class="friends_card-avatar" src="<%= site.customConfig.friendslogo %>"></a>
-                            <% } %>  
-                        <div class="friends_card-info">
-                          <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>
-                          <br/>
-                          <%= friend.description %>
-                        </div>
-                      </div>
-                    <% }); %>
-                  <% } %>
+                <% site.customConfig.friends.forEach(function(friend) { %>
+                <div class="friends_card">
+                    <% if (friend.siteLogo) { %>
+                    <a href="<%= friend.siteLink %>" target="_blank"><img class="friends_card-avatar"
+                            src="<%= friend.siteLogo %>"></a>
+                    <% } else { %>
+                    <a href="<%= friend.siteLink %>" target="_blank"><img class="friends_card-avatar"
+                            src="<%= site.customConfig.friendslogo %>"></a>
+                    <% } %>
+                    <div class="friends_card-info">
+                        <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>
+                        <br />
+                        <%= friend.description %>
+                    </div>
+                </div>
+                <% }); %>
+                <% } %>
+                <% if (site.customConfig.valineID && site.customConfig.valineKey) { %>
+                    <div id="vcomments"></div>
+                    <%- include('./includes/valine') %>
+                    <% } %>
             </div>
             <!--  -->
             <div class="main-container-middle"></div>
@@ -40,7 +47,6 @@
                 <%- include('./includes/cards/notice-card.ejs') %>
 
             </div>
-
         </div>
 
 
