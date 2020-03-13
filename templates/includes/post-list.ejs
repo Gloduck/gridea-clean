@@ -25,7 +25,7 @@
                         <a href="<%= post.link %>" class="post-feature-image" style="background-image:url(<%= post.feature %>) ">
                         </a>
                         <% }else if(site.customConfig.autofeature){ %>
-                            <a href="<%= post.link %>" class="post-feature-image" style="background-image:url(<%= site.customConfig.autofeature %>) ">
+                            <a href="<%= post.link %>" class="post-feature-image" style="background-image:url(<%= site.customConfig.autofeature %>?v=<%= Math.random() %>) ">
                             </a>
                             <%} %> 
                             <div class="post-content">
