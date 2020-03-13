@@ -117,13 +117,22 @@
                 }
             ],
             "note": "添加友链页面为当前域名+/friends"
-        },{
+        },
+        {
             "name": "friendslogo",
             "label": "默认友链logo图片",
             "group": "友链",
             "value": "//tva1.sinaimg.cn/large/006ZFECEgy1gcpytywd82j30j60j6aar.jpg",
             "type": "input",
             "note": "请输入默认友链图片的链接"
+        },
+        {
+            "name": "friendsnotice",
+            "label": "提示信息",
+            "group": "友链",
+            "value": "//tva1.sinaimg.cn/large/006ZFECEgy1gcpytywd82j30j60j6aar.jpg",
+            "type": "textarea",
+            "note": "友链页面的提示信息，支持使用HTML，不填写将不会显示。"
         }
     ]
 }
