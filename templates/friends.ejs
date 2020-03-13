@@ -12,6 +12,11 @@
 
         <div id="main-content" class="post-container main-container">
             <div id="content" class="main-container-left">
+                <% if (site.customConfig.friendsnotice) { %>
+                    <div class="i-card">
+                        <div class="friends_card-notice"><%= site.customConfig.friendsnotice %> </div>
+                    </div>
+                <% } %> 
                 <% if (site.customConfig.friends) { %>
                 <% site.customConfig.friends.forEach(function(friend) { %>
                 <div class="friends_card">
@@ -31,9 +36,9 @@
                 <% }); %>
                 <% } %>
                 <% if (site.customConfig.valineID && site.customConfig.valineKey) { %>
-                    <div id="vcomments"></div>
-                    <%- include('./includes/valine') %>
-                    <% } %>
+                <div id="vcomments"></div>
+                <%- include('./includes/valine') %>
+                <% } %>
             </div>
             <!--  -->
             <div class="main-container-middle"></div>
