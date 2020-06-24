@@ -77,12 +77,36 @@
             "note": "请输入highlightjs的css链接地址"
         },
         {
-            "name": "autofeature",
+            "name": "feature",
             "label": "默认封面图片",
+            "group": "封面图片",
+            "type": "array",
+            "value": [],
+            "arrayItems": [
+                {
+                    "label": "链接",
+                    "name": "autoimg",
+                    "type": "input",
+                    "value": ""
+                }
+            ],
+            "note": "请输入默认封面图片的链接"
+        },
+        {
+            "name": "featurelength",
+            "label": "用于随机的默认图片的数量",
+            "group": "封面图片",
+            "type": "input",
+            "value": "",
+            "note": "必须与默认封面图片同时指定，否则无效，注意，是数字"
+        },
+        {
+            "name": "randomImg",
+            "label": "是否随机图片",
             "group": "封面图片",
             "value": "",
             "type": "input",
-            "note": "请输入默认封面图片的链接"
+            "note": "请输入随机图片API，优先级高于默认封面图片"
         },
         {
             "name": "friends",
@@ -132,7 +156,7 @@
             "group": "友链",
             "value": "//tva1.sinaimg.cn/large/006ZFECEgy1gcpytywd82j30j60j6aar.jpg",
             "type": "textarea",
-            "note": "友链页面的提示信息，支持使用HTML，不填写将不会显示。"
+            "note": "友链页面的提示信息，不填写将不会显示。"
         }
     ]
 }
